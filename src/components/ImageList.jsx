@@ -72,7 +72,7 @@ const ImageList = () => {
       <ImageGrid>
         {images.map(image => (
           <ImageBox key={image.id}>
-            <Image src={`${import.meta.env.VITE_API_ROUTE_IMAGES}/${image.image}`} alt="Imagem" />
+            <Image src={image.imageUrl} alt="Imagem" />
             <DeleteButton onClick={() => handleDeleteImage(image.id)}>Excluir</DeleteButton>
           </ImageBox>
         ))}
